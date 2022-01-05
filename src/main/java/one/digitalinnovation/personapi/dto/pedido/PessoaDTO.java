@@ -6,14 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import one.digitalinnovation.personapi.entidades.Telefone;
 import org.hibernate.validator.constraints.br.CPF;
-<<<<<<< HEAD
-
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.FetchType;
-import javax.persistence.OneToMany;
-=======
->>>>>>> 6d4cf7006e235248aea18443f8b9c73931c789c5
 import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
@@ -41,13 +33,9 @@ public class PessoaDTO {
 
     private String aniversario;
 
-<<<<<<< HEAD
+
     @Valid
     @NotEmpty
-=======
-    @NotEmpty
-    @Valid
->>>>>>> 6d4cf7006e235248aea18443f8b9c73931c789c5
     private List<Telefone> telefones;
 
 }

@@ -11,11 +11,7 @@ public interface MapeadorPessoa {
 
     MapeadorPessoa INSTANCE = Mappers.getMapper(MapeadorPessoa.class);
 
-<<<<<<< HEAD
     @Mapping(target = "aniversario", source = "aniversario", dateFormat = "dd-MM-yyyy")
-=======
-    @Mapping(target = "aniversario", source = "aniversario", dateFormat = "dd-MM-YYYY")
->>>>>>> 6d4cf7006e235248aea18443f8b9c73931c789c5
     Pessoa toModel(PessoaDTO pessoaDTO);
 
     PessoaDTO toDTO(Pessoa pessoa);
