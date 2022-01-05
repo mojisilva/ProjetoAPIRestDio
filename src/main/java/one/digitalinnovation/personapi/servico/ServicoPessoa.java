@@ -1,7 +1,11 @@
 package one.digitalinnovation.personapi.servico;
 
+<<<<<<< HEAD
 import one.digitalinnovation.personapi.dto.MessagemResposta;
 import one.digitalinnovation.personapi.dto.pedido.PessoaDTO;
+=======
+import one.digitalinnovation.personapi.dto.resposta.MessagemResposta;
+>>>>>>> 6d4cf7006e235248aea18443f8b9c73931c789c5
 import one.digitalinnovation.personapi.entidades.Pessoa;
 import one.digitalinnovation.personapi.mapeador.MapeadorPessoa;
 import one.digitalinnovation.personapi.repositorio.RepositorioPessoa;
