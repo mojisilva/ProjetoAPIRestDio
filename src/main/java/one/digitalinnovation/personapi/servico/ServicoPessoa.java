@@ -1,6 +1,6 @@
 package one.digitalinnovation.personapi.servico;
 
-import one.digitalinnovation.personapi.dto.MessagemResposta;
+import one.digitalinnovation.personapi.dto.resposta.MessagemResposta;
 import one.digitalinnovation.personapi.entidades.Pessoa;
 import one.digitalinnovation.personapi.repositorio.RepositorioPessoa;
 import org.springframework.beans.factory.annotation.Autowired;
