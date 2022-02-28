@@ -1,4 +1,4 @@
-package one.digitalinnovation.personapi.mapeador;
+package one.digitalinnovation.personapi.dto.mapeador;
 
 import one.digitalinnovation.personapi.dto.pedido.PessoaDTO;
 import one.digitalinnovation.personapi.entidades.Pessoa;
@@ -6,10 +6,8 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface MapeadorPessoa {
-
-    MapeadorPessoa INSTANCE = Mappers.getMapper(MapeadorPessoa.class);
 
     @Mapping(target = "aniversario", source = "aniversario", dateFormat = "dd-MM-yyyy")
     Pessoa toModel(PessoaDTO pessoaDTO);
