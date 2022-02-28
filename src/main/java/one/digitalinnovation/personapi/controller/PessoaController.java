@@ -31,6 +31,7 @@ public class PessoaController {
     public List<PessoaDTO> listAll(){
        return servicoPessoa.listAll();
     }
+
     @GetMapping("/{id}")
     public PessoaDTO buscar(@PathVariable Long id) throws PessoaNotFoundException {
         return servicoPessoa.buscar(id);

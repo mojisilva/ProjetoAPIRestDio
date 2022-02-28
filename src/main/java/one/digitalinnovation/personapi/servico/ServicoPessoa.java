@@ -26,11 +26,9 @@ public class ServicoPessoa {
     }
 
     public PessoaDTO buscar(Long id) throws PessoaNotFoundException {
-        Optional<Pessoa> pessoaOptional = repositorioPessoa.findById(id);
-        if(pessoaOptional.isEmpty()){
-            throw new PessoaNotFoundException(id);
-        }
-        return mapeadorPessoa.toDTO(pessoaOptional.get());
+        Pessoa pessoa = repositorioPessoa.findById(id)
+                .orElseThrow(() -> new PessoaNotFoundException(id));
+        return mapeadorPessoa.toDTO(pessoa);
 
     }
 
