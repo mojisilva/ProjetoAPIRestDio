@@ -1,7 +1,7 @@
-package one.digitalinnovation.personapi.dto.mapeador;
+package one.digitalinnovation.apipessoa.dto.mapeador;
 
-import one.digitalinnovation.personapi.dto.pedido.PessoaDTO;
-import one.digitalinnovation.personapi.entidades.Pessoa;
+import one.digitalinnovation.apipessoa.dto.pedido.PessoaDTO;
+import one.digitalinnovation.apipessoa.entidades.Pessoa;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

@@ -1,4 +1,4 @@
-package one.digitalinnovation.personapi.excecoes;
+package one.digitalinnovation.apipessoa.excecoes;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

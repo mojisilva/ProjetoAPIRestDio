@@ -1,17 +1,15 @@
-package one.digitalinnovation.personapi.servico;
+package one.digitalinnovation.apipessoa.servico;
 
 import lombok.AllArgsConstructor;
-import one.digitalinnovation.personapi.dto.pedido.PessoaDTO;
-import one.digitalinnovation.personapi.dto.resposta.MessagemResposta;
-import one.digitalinnovation.personapi.entidades.Pessoa;
-import one.digitalinnovation.personapi.excecoes.PessoaNaoEncontradaException;
-import one.digitalinnovation.personapi.dto.mapeador.MapeadorPessoa;
-import one.digitalinnovation.personapi.repositorio.RepositorioPessoa;
+import one.digitalinnovation.apipessoa.dto.pedido.PessoaDTO;
+import one.digitalinnovation.apipessoa.dto.resposta.MessagemResposta;
+import one.digitalinnovation.apipessoa.entidades.Pessoa;
+import one.digitalinnovation.apipessoa.excecoes.PessoaNaoEncontradaException;
+import one.digitalinnovation.apipessoa.dto.mapeador.MapeadorPessoa;
+import one.digitalinnovation.apipessoa.repositorio.RepositorioPessoa;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
 
-import java.nio.file.ProviderNotFoundException;
 import java.util.List;
 import java.util.stream.Collectors;
 

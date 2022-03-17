@@ -1,4 +1,4 @@
-package one.digitalinnovation.personapi;
+package one.digitalinnovation.apipessoa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

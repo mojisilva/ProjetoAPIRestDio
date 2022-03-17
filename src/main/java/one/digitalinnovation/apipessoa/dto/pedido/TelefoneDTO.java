@@ -1,10 +1,10 @@
-package one.digitalinnovation.personapi.dto.pedido;
+package one.digitalinnovation.apipessoa.dto.pedido;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import one.digitalinnovation.personapi.enums.TipoTelefone;
+import one.digitalinnovation.apipessoa.enums.TipoTelefone;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.validation.constraints.NotEmpty;
