@@ -25,8 +25,4 @@ public class Telefone {
     @Column(nullable = false)
     private String numero;
 
-
-    @ManyToOne
-    @JoinColumn(name = "pessoa_id")
-    private Pessoa pessoa;
 }

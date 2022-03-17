@@ -1,2 +1,3 @@
-# ProjetoAPIRestDio
-Repositório do projeto de desafio API REST da plataforma DIO
+# Projeto API Rest Dio
+
+Projeto de criação de crud de cadastro de pessoas utilizando api rest, spring  e maven, para desafio de código da DIO.

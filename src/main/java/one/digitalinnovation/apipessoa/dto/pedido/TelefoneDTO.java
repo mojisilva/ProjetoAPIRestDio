@@ -25,7 +25,4 @@ public class TelefoneDTO {
     @Size(min= 10, max = 14)
     private String numero;
 
-    @NotEmpty
-    private PessoaDTO pessoaDTO;
-
 }

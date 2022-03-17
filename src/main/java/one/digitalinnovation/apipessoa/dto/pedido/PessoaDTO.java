@@ -33,7 +33,6 @@ public class PessoaDTO {
 
     private String aniversario;
 
-
     @Valid
     @NotEmpty
     private List<Telefone> telefones;

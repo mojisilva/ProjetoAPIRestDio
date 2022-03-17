@@ -9,7 +9,6 @@ import one.digitalinnovation.apipessoa.dto.mapeador.MapeadorPessoa;
 import one.digitalinnovation.apipessoa.repositorio.RepositorioPessoa;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -20,20 +19,16 @@ public class ServicoPessoa {
     private final RepositorioPessoa repositorioPessoa;
     private final MapeadorPessoa mapeadorPessoa;
 
-
     public MessagemResposta criarPessoa(PessoaDTO pessoaDTO) {
         Pessoa pessoa = mapeadorPessoa.toModel(pessoaDTO);
         Pessoa pessoaCriada = repositorioPessoa.save(pessoa);
-        MessagemResposta messagemResposta = criarMensagemResposta("Pessoa criada com ID: ", pessoaCriada.getId());
-
-        return messagemResposta;
+        return criarMensagemResposta("Pessoa criada com ID: ", pessoaCriada.getId());
     }
 
     public PessoaDTO buscar(Long id) throws PessoaNaoEncontradaException {
         Pessoa pessoa = repositorioPessoa.findById(id)
                 .orElseThrow(() -> new PessoaNaoEncontradaException(id));
         return mapeadorPessoa.toDTO(pessoa);
-
     }
 
     public List<PessoaDTO> listarPessoas() {
@@ -48,8 +43,7 @@ public class ServicoPessoa {
             .orElseThrow(() -> new PessoaNaoEncontradaException(id));
         Pessoa pessoaAtualizada = mapeadorPessoa.toModel(pessoaDTO);
         Pessoa pessoaSalva = repositorioPessoa.save(pessoaAtualizada);
-        MessagemResposta mensagemResposta =criarMensagemResposta("Pessoa atualizada com sucesso ID ", pessoaSalva.getId());
-        return mensagemResposta;
+        return criarMensagemResposta("Pessoa atualizada com sucesso ID ", pessoaSalva.getId());
     }
 
     public void deletarPessoa(Long id) throws PessoaNaoEncontradaException{
@@ -58,12 +52,10 @@ public class ServicoPessoa {
         repositorioPessoa.deleteById(id);
     }
 
-
     private MessagemResposta criarMensagemResposta(String s, Long id) {
         return MessagemResposta
                 .builder()
                 .mensagem(s + id)
                 .build();
     }
-
 }

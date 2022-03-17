@@ -10,7 +10,6 @@ public interface MapeadorPessoa {
 
     @Mapping(target = "aniversario", source = "aniversario", dateFormat = "dd-MM-yyyy")
     Pessoa toModel(PessoaDTO pessoaDTO);
-
     PessoaDTO toDTO(Pessoa pessoa);
 
 }
