@@ -16,8 +16,6 @@ public class Telefone {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false)
-
     private Long id;
 
     @Enumerated(EnumType.STRING)
@@ -26,4 +24,9 @@ public class Telefone {
 
     @Column(nullable = false)
     private String numero;
+
+
+    @ManyToOne
+    @JoinColumn(name = "pessoa_id")
+    private Pessoa pessoa;
 }

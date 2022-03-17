@@ -18,7 +18,6 @@ public class Pessoa {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false)
     private Long id;
 
     @Column(nullable = false)
@@ -30,10 +29,8 @@ public class Pessoa {
     @Column(nullable = false, unique = true)
     private String cpf;
 
-    @Column(nullable = false)
     private LocalDate aniversario;
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
-    @Column(nullable = false)
+    @OneToMany(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REMOVE})
     private List<Telefone> telefones = new ArrayList<>();
 }

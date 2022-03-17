@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.mojisilva</groupId>
-	<artifactId>api-vacinados-covid</artifactId>
+	<artifactId>api-pessoas</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>api-vacinados-covid</name>
-	<description>API Rest de gerenciamento de vacinados covid</description>
+	<description>API Rest de cadastro de pessoas</description>
 	<properties>
 		<java.version>1.7</java.version>
 	</properties>

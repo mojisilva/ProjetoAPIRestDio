@@ -4,7 +4,6 @@ import one.digitalinnovation.personapi.dto.pedido.PessoaDTO;
 import one.digitalinnovation.personapi.entidades.Pessoa;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.mapstruct.factory.Mappers;
 
 @Mapper(componentModel = "spring")
 public interface MapeadorPessoa {

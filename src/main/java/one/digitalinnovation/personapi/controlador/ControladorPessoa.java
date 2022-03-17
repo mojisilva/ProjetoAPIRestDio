@@ -1,5 +1,6 @@
 package one.digitalinnovation.personapi.controlador;
 
+import lombok.AllArgsConstructor;
 import one.digitalinnovation.personapi.dto.pedido.PessoaDTO;
 import one.digitalinnovation.personapi.dto.resposta.MessagemResposta;
 import one.digitalinnovation.personapi.excecoes.PessoaNaoEncontradaException;
@@ -12,19 +13,16 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/pessoas")
+@AllArgsConstructor(onConstructor = @__(@Autowired))
 public class ControladorPessoa {
 
-    private ServicoPessoa servicoPessoa;
+    private final ServicoPessoa servicoPessoa;
 
-    @Autowired
-    public ControladorPessoa(ServicoPessoa servicoPessoa) {
-        this.servicoPessoa = servicoPessoa;
-    }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public MessagemResposta criaPessoa(@RequestBody @Valid PessoaDTO pessoaDTO) {
-        return servicoPessoa.criaPessoa(pessoaDTO);
+    public MessagemResposta criarPessoa(@RequestBody @Valid PessoaDTO pessoaDTO) {
+        return servicoPessoa.criarPessoa(pessoaDTO);
     }
 
     @GetMapping
