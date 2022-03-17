@@ -1,4 +1,4 @@
-package one.digitalinnovation.personapi.controller;
+package one.digitalinnovation.personapi.controlador;
 
 import one.digitalinnovation.personapi.dto.pedido.PessoaDTO;
 import one.digitalinnovation.personapi.dto.resposta.MessagemResposta;
@@ -12,12 +12,12 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/pessoas")
-public class PessoaController {
+public class ControladorPessoa {
 
     private ServicoPessoa servicoPessoa;
 
     @Autowired
-    public PessoaController(ServicoPessoa servicoPessoa) {
+    public ControladorPessoa(ServicoPessoa servicoPessoa) {
         this.servicoPessoa = servicoPessoa;
     }
 
